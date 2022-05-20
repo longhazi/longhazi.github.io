@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>创建vuepress项目 | LongZai · 笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="记录一下">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.a0949ec3.js" as="script"><link rel="preload" href="/assets/js/2.82021bb6.js" as="script"><link rel="preload" href="/assets/js/9.5c28412a.js" as="script"><link rel="prefetch" href="/assets/js/3.5d582e3c.js"><link rel="prefetch" href="/assets/js/4.dc4122a0.js"><link rel="prefetch" href="/assets/js/5.6f0fa82e.js"><link rel="prefetch" href="/assets/js/6.6e41bdef.js"><link rel="prefetch" href="/assets/js/7.fb4746fd.js"><link rel="prefetch" href="/assets/js/8.3e045986.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/huanglong.png" alt="LongZai · 笔记" class="logo"> <span class="site-name can-hide">LongZai · 笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  指南
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  指南
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="创建vuepress项目"><a href="#创建vuepress项目" class="header-anchor">#</a> 创建vuepress项目</h3> <h4 id="_1-创建并进入一个新目录"><a href="#_1-创建并进入一个新目录" class="header-anchor">#</a> 1. 创建并进入一个新目录</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">mkdir</span> vuepress-starter <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> vuepress-starter
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_2-使用你喜欢的包管理器进行初始化"><a href="#_2-使用你喜欢的包管理器进行初始化" class="header-anchor">#</a> 2. 使用你喜欢的包管理器进行初始化</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> init -y
+<span class="token comment">#-y就不需要一步步确认直接是默认的packge.json配置</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_3-将-vuepress-安装为本地依赖"><a href="#_3-将-vuepress-安装为本地依赖" class="header-anchor">#</a> 3. 将 VuePress 安装为本地依赖</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> -D vuepress
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div> <div style="color:red;">注意：容易出现此类情况</div> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>added <span class="token number">1297</span> packages, and audited <span class="token number">1298</span> packages <span class="token keyword">in</span> 2m
+
+<span class="token number">90</span> packages are looking <span class="token keyword">for</span> funding
+  run <span class="token variable"><span class="token variable">`</span><span class="token function">npm</span> fund<span class="token variable">`</span></span> <span class="token keyword">for</span> details
+
+<span class="token number">28</span> vulnerabilities <span class="token punctuation">(</span><span class="token number">14</span> moderate, <span class="token number">14</span> high<span class="token punctuation">)</span>
+
+To address all issues, run:
+  <span class="token function">npm</span> audit fix
+
+Run <span class="token variable"><span class="token variable">`</span><span class="token function">npm</span> audit<span class="token variable">`</span></span> <span class="token keyword">for</span> details.
+-------------------------------------------------------------------
+<span class="token comment">#出现以上情况按提示执行↓</span>
+<span class="token function">npm</span> audit fix <span class="token comment">#检测项目依赖中的漏洞并自动安装需要更新的有漏洞的依赖，无需自己跟踪和修复。</span>
+<span class="token comment">#如果之后还会有报错，请清除缓存~</span>
+<span class="token function">npm</span> cache clean --force
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h4 id="_4-创建你的第一篇文档"><a href="#_4-创建你的第一篇文档" class="header-anchor">#</a> 4. 创建你的第一篇文档</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">mkdir</span> docs <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">'# Hello VuePress'</span> <span class="token operator">&gt;</span> docs/README.md
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_5-在-package-json-中添加启动脚本"><a href="#_5-在-package-json-中添加启动脚本" class="header-anchor">#</a> 5. 在 <code>package.json</code> 中添加启动脚本</h4> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;docs:dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;docs:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_6-在本地启动服务器"><a href="#_6-在本地启动服务器" class="header-anchor">#</a> 6. 在本地启动服务器</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> run docs:dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>VuePress 会在 <a href="http://localhost:8080/" target="_blank" rel="noopener noreferrer">http://localhost:8080<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>启动一个热重载的开发服务器。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a0949ec3.js" defer></script><script src="/assets/js/2.82021bb6.js" defer></script><script src="/assets/js/9.5c28412a.js" defer></script>
+  </body>
+</html>
